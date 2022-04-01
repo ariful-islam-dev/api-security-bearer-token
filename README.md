@@ -8,3 +8,5 @@
 - [x] Login User With JWT
 - [x] About JWT (theory)
 - [ ] Verify JWT Token
+- [x] Authentication System
+- [x] Authorization System (role base)

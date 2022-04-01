@@ -1,5 +1,6 @@
 const jwt = require("jsonwebtoken");
-function authenticate(req, res, next) {
+const User = require("./User");
+async function authenticate(req, res, next) {
   let token = req.headers.authorization;
 
   if (!token) {
@@ -10,12 +11,12 @@ function authenticate(req, res, next) {
 
   try {
     token = token.split(" ")[1];
-    const user = jwt.verify(token, "JWT_STRONG_SECRET");
+    const decode = await jwt.verify(token, "JWT_STRONG_SECRET");
+    const user = await User.findById(decode._id).select("-password");
     req.user = user;
     next();
-
   } catch (err) {
-    const error = new Error("Invalid Token")
+    const error = new Error("Invalid Token");
     error.status = 400;
     throw error;
   }

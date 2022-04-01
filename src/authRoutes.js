@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken')
 const router = require("express").Router();
 
 router.post("/register", async (req, res, next) => {
-  const { name, email, password } = req.body;
+  const { name, email, password, role } = req.body;
   try {
     let user = await User.findOne({ email });
 
@@ -23,6 +23,7 @@ router.post("/register", async (req, res, next) => {
       name,
       email,
       password: hash,
+      role
     });
 
     await user.save();
