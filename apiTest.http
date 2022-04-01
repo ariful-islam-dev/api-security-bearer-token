@@ -19,7 +19,8 @@ Content-Type: application/json
 
 ###
 GET http://localhost:4000/public
+
 ###
 GET http://localhost:4000/protected
-Authorization: Bearer token
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ2ZmIwYTA2ZDk3ZDhkNTliM2Q5MzMiLCJuYW1lIjoiQXJpZnVsIElzbGFtIiwiZW1haWwiOiJhcmlmdWxAZ21haWwuY29tIiwiaWF0IjoxNjQ4ODI0NjY4LCJleHAiOjE2NDg4MzE4Njh9.qgJ1fzvH8QHP5-j5Jmz6-QwtDeB6Wx1VhYjUjfJ1Pgg
 

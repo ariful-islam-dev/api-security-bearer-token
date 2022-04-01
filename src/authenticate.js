@@ -13,9 +13,11 @@ function authenticate(req, res, next) {
     const user = jwt.verify(token, "JWT_STRONG_SECRET");
     req.user = user;
     next();
-    
+
   } catch (err) {
-    next(err);
+    const error = new Error("Invalid Token")
+    error.status = 400;
+    throw error;
   }
 }
 

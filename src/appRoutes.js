@@ -6,7 +6,9 @@ router.get('/public', (req, res)=>{
     res.status(200).json({message: "I am a Public Route"})
 })
 router.get('/protected', authenticate, (req, res)=>{
-    res.status(200).json({message: "I am a Protected Route"})
+    const user = req.user
+
+    res.status(200).json({message: "User Login Successful", user })
 })
 
 module.exports = router
