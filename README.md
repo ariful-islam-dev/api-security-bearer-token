@@ -1,3 +1,3 @@
-# API SECURITY (Berrar Token)
+# API SECURITY (Bearar Token)
 
 **_Backend API_**
