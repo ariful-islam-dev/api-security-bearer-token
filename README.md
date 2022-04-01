@@ -6,3 +6,4 @@
 
 - [x] Register User
 - [x] Login User With JWT
+- [x] About JWT (theory)
